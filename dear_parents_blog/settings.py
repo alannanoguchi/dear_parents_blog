@@ -56,7 +56,7 @@ ROOT_URLCONF = 'dear_parents_blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], # created
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
