@@ -22,4 +22,7 @@ urlpatterns = [
      # Blog App
     path('', include('blog.urls')),
 
+    # User Authentication
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')) # must include!
 ]
