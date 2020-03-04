@@ -1,8 +1,71 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h3>Blogs {% if pages %}<small class="text-muted">({{ pages|length }} Page{{ pages|length|pluralize:"s" }})</small>{% endif %}</h3>
-  <img src = "https://images.unsplash.com/photo-1518101645466-7795885ff8f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" style= "height: 550px; width:800px;">
+  <h3>Blogs {% if pages %}<small class="text-muted">({{ pages|length }} Post{{ pages|length|pluralize:"s" }})</small>{% endif %}</h3>
+
+
+{% if request.user.is_authenticated %}
+<div class="row"> 
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1518101645466-7795885ff8f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" style= "height: 120px; width:155px;">
+          <img src="https://images.unsplash.com/photo-1521472386493-d57e3bfc3ef3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2225&q=80" style= "height: 120px; width:155px;">
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2224&q=80" style= "height: 120px; width:155px;">
+          <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80" style= "height: 120px; width:155px;">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+          <img src="https://images.unsplash.com/photo-1527490087278-9c75be0b8052?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+          <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+        </div>
+        <div class="column" style="margin-top:0.2em">
+            <img src="https://images.unsplash.com/photo-1509924603848-aca5e5f276d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1513807016779-d51c0c026263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1485783522162-1dbb8ffcbe5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+             
+        </div>  
+        <div class="column" style="margin-top:0.2em">
+            <img src="https://images.unsplash.com/photo-1440288736878-766bd5839edb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1458134580443-fbb0743304eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1460788150444-d9dc07fa9dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1444840535719-195841cb6e2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1445796886651-d31a2c15f3c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1519226135464-df5a9dbcd2a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1504169448388-60f322bebb2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">      
+        </div>
+        <div class="column" style="margin-top:0.2em">
+            <img src="https://images.unsplash.com/photo-1505246475357-190baf1fd53d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1503463168353-9d883c7f5255?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1555791019-72d3af01da82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1511852365831-4c1b2b2b1325?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1506958933531-3dfb8a27542f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1531129630896-1744cab0cafd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">
+            <img src="https://images.unsplash.com/photo-1495131292899-bc096577e8f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" style= "height: 120px; width:155px;">      
+        </div>
+      </div>
+  <!-- <img src = "https://images.unsplash.com/photo-1518101645466-7795885ff8f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" style= "height: 550px; width:800px;"> -->
+
+{% else %}
+<div class="jumbotron">
+    <h1 style="font-family: spartan, sans-serif; color:rgb(243, 161, 136); text-align:center;" class="display-3">Welcome to Dear Parents</h1>
+    <h3 style="text-align: center">The blog for parents to:</h3>
+    <div class="row">
+            <div class="column">
+              <img src="https://images.unsplash.com/photo-1439920120577-eb3a83c16dd7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" style="height: 300px; width:350px">
+              <h3  style="margin-top: 10px; font-family: spartan, sans-serif; color:rgb(243, 161, 136)">Share stories <i class="fab fa-gratipay"></i></h3>
+            </div>
+            <div class="column">
+              <img src="https://images.unsplash.com/photo-1496262967815-132206202600?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2295&q=80" style="height:300px; width:350px">
+              <h3  style="margin-top: 10px; font-family: spartan, sans-serif; color:rgb(243, 161, 136)">Ask questions <i class="fas fa-question-circle"></i></h3>
+            </div>
+            <div class="column">
+              <img src="https://images.unsplash.com/photo-1564121211835-e88c852648ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"style="height: 300px; width:350px">
+              <h3  style="margin-top: 10px; font-family: spartan, sans-serif; color:rgb(243, 161, 136)">Give advice <i class="fas fa-hands-helping"></i></h3>
+            </div>
+          </div>
+</div>
+{% endif %}
   <hr>
   {% if pages %}
     <div class="card-columns">
