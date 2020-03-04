@@ -1,0 +1,1 @@
+web: gunicorn dear_parents_blog.wsgi --log-file -

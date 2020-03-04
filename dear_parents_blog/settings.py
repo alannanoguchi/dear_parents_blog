@@ -25,7 +25,7 @@ SECRET_KEY = '83s%!nrnl53n^^j7)62ttu)012$l$b2hy*v&-n3vzx89u)^)&_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'dear-parents-blog.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'dear-parents-blog.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework', # run $ pip3 install djangorestframework
 
     'blog', # created blog app
     'accounts', # created accounts app
@@ -57,7 +59,9 @@ ROOT_URLCONF = 'dear_parents_blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')], # created
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
+        ], # created
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +130,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_LOGOUT_URL = '/' #required for user authentication
 
-# wiki app settings
+# blog app settings
 BLOG_POST_TITLE_MAX_LENGTH = 600
 
 
